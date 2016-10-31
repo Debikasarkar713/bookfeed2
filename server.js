@@ -50,5 +50,5 @@ app.use('/show', showRouter);
 // Listen on port for connections
 // process.env.PORT is needed for when we deploy to Heroku
 
-app.listen(port, () => {console.log(`server is listening on port debika`, 3000);
+app.listen(port, () => {console.log(`server is listening on port debika`);
 });
