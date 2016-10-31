@@ -1,5 +1,5 @@
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
-const dotEnv          = require('dotenv').config({ silent: true });
+require('dotenv').config({ silent: true });
 const express         = require('express');
 const morgan          = require('morgan');
 const path            = require('path');
@@ -10,11 +10,13 @@ const methodOverride  = require('method-override');
 const indexRouter     = require('./routes/index.js');
 const authRouter      = require('./routes/auth');
 const usersRouter     = require('./routes/users');
+const showRouter      = require('./routes/show');
 
 const app             = express();
-const SECRET          = 'tacos3000';
+const port            = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 // log requests to STDOUT
 app.use(morgan('dev'));
@@ -34,7 +36,7 @@ app.use(cookieParser());
 app.use(session({
   resave: false,
   saveUninitialized: false,
-  secret: SECRET
+  secret: 'DebikaSarkar',
 }));
 
 // Set static file root folder
@@ -43,10 +45,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/users', usersRouter);
+app.use('/show', showRouter);
 
 // Listen on port for connections
 // process.env.PORT is needed for when we deploy to Heroku
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`free tacos at ${port}`);
+
+app.listen(port, () => {console.log(`server is listening on port debika`, 3000);
 });
