@@ -46,6 +46,7 @@ app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/users', usersRouter);
 app.use('/show', showRouter);
+app.use('/feed', showRouter);
 
 // Listen on port for connections
 // process.env.PORT is needed for when we deploy to Heroku

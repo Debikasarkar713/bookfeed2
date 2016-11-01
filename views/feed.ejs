@@ -11,10 +11,17 @@
 <header>
   <h1>Bookfeed!</h1>
 </header>
-  <form class="" action="/feed/" method="get">
+  <form class="" action="feed" method="get">
     <input type="text" name="search" placeholder="search your favorite books">
     <input type="submit" value="Go">
   </form>
+
+<% if (books) { %>
+   <% books.volumeInfo.items.forEach(function(n) { %>
+      <img src='<%= n.volumeInfo.imageLinks.thumbnail  %>'/>
+      <h3><%= n.volumeInfo.title %></h3>
+<% }) %>
+<% }; %>
 
 
 </body>

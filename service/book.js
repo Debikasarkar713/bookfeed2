@@ -6,8 +6,6 @@ const API_KEY = process.env.OPEN_KEY;
 
 function bookSearch(req, res, next) {
   const book = req.query.search;
-  console.log(book);
-
   fetch(`${API_URL}q=${book}&key=${API_KEY}`)
   .then(r => r.json())
   .then((result) => {

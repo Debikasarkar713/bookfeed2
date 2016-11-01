@@ -5,8 +5,7 @@ const { deleteBooks, saveBooks } = require('../models/favorites');
 
 showRouter.get('/', bookSearch, (req, res) => {
   // console.log(res.book);
-
-  // res.json(res.book);
+  res.json(res.book);
   res.render('feed', {
     books: res.book || [],
   });
