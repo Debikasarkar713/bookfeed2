@@ -17,7 +17,7 @@
   </form>
 
 <% if (books) { %>
-   <% books.volumeInfo.items.forEach(function(n) { %>
+   <% books.items.forEach(function(n) { %>
       <img src='<%= n.volumeInfo.imageLinks.thumbnail  %>'/>
       <h3><%= n.volumeInfo.title %></h3>
 <% }) %>
@@ -26,3 +26,4 @@
 
 </body>
 </html>
+

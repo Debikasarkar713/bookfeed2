@@ -1,11 +1,12 @@
 const fetch = require('node-fetch');
 
 const API_URL = 'https://www.googleapis.com/books/v1/volumes?';
-// const API_URL = 'https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=yourAPIKey';
-const API_KEY = process.env.OPEN_KEY;
+const API_KEY = process.env.API_KEY;
 
 function bookSearch(req, res, next) {
   const book = req.query.search;
+  console.log(book);
+
   fetch(`${API_URL}q=${book}&key=${API_KEY}`)
   .then(r => r.json())
   .then((result) => {
