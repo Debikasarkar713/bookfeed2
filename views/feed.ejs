@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
   <link rel="stylesheet" href="/normalize.css">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <header>
-  <h1>Bookfeed!</h1>
+  <h1>Save and Like into the cateogories!</h1>
 </header>
   <form class="" action="feed" method="get">
     <input type="text" name="search" placeholder="search your favorite books">
@@ -20,6 +20,23 @@
    <% books.items.forEach(function(n) { %>
       <img src='<%= n.volumeInfo.imageLinks.thumbnail  %>'/>
       <h3><%= n.volumeInfo.title %></h3>
+      <form class="likeBtn" action="/show/favorites" method="post">
+<input type="hidden" name="Politics[category]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="Art[category]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="Finance[category]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="Art[description]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="History[category]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="Art[description]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="Classics[category]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="Art[description]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="Technology[category]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="Gender/Humanities[category]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="Biographies[category]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="Art[description]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="Autobiographies[category]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="hidden" name="Art[description]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
+<input type="submit" value="Like">
+ </form>
 <% }) %>
 <% }; %>
 

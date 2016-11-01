@@ -1,0 +1,22 @@
+body {
+  background-image: url("https://static1.squarespace.com/static/536b91e4e4b00b5a4b676ae4/t/53a2f7dbe4b080549e622d3e/1403189223492/TheMorganLibrary.jpg?format=1500w");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 650px;
+  background-color: black;
+
+  text-align: center;
+  text
+
+}
+
+header{
+  margin: 0 0 0 0;
+  padding: 250px 0 0 0;
+ }
+
+ h1{
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+ }

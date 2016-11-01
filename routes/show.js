@@ -1,7 +1,7 @@
 const showRouter = require('express').Router();
 
 const { bookSearch } = require('../service/book');
-const { deleteBooks, saveBooks } = require('../models/favorites');
+const { deleteBooks, saveBooks, getBooks } = require('../models/favorites');
 
 showRouter.get('/', bookSearch, (req, res) => {
   console.log('books', res.book);
@@ -16,7 +16,12 @@ showRouter.delete('/favorites/:id', deleteBooks, (req, res) => {
 });
 
 showRouter.post('/favorites', saveBooks, (req, res) => {
-  res.redirect('/show');
+  res.redirect('/');
 });
+
+showRouter.get('/favorites', getBooks, (req, res) => {
+  res.json(res.favorites);
+});
+
 
 module.exports = showRouter;

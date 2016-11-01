@@ -26,11 +26,11 @@ function saveBooks(req, res, next) {
   }
 
   // Adding userId to insertObj
-  insertObj.favorite.userId = req.session.userId;
+  insertObj.userId = req.session.userId;
 
   getDB().then((db) => {
     db.collection('favorites')
-      .insert(insertObj.favorite, (insertErr, result) => {
+      .insert(insertObj, (insertErr, result) => {
         if (insertErr) return next(insertErr);
         res.saved = result;
         db.close();
