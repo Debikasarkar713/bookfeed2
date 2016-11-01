@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-  <h1>Save and Like into the cateogories!</h1>
+  <h1>Save and Like into the categories!</h1>
 </header>
   <form class="" action="feed" method="get">
     <input type="text" name="search" placeholder="search your favorite books">
@@ -20,7 +20,7 @@
    <% books.items.forEach(function(n) { %>
       <img src='<%= n.volumeInfo.imageLinks.thumbnail  %>'/>
       <h3><%= n.volumeInfo.title %></h3>
-      <form class="likeBtn" action="/show/favorites" method="post">
+      <form class="likeBtn" action="/users/profile" method="post">
 <input type="hidden" name="Politics[category]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
 <input type="hidden" name="Art[category]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">
 <input type="hidden" name="Finance[category]" value="<%= n.volumeInfo.imageLinks.thumbnail %> <%= n.title %>">

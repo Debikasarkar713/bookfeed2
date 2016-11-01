@@ -7,10 +7,19 @@
   <body>
     <!-- Example -->
     <h1>Welcome! <%= user.username %></h1>
-    <form action="/auth?_method=DELETE" method="post">
-      <input type="submit" value="Logout">
-    </form>
-
     <a href='/'>Search</a>
+
+ <% books.forEach(function(n) { %>
+   <ul>
+     <div>
+       <img src='<%= n.volumeInfo.imageLinks.thumbnail  %>'/>
+      <h3><%= n.volumeInfo.title %></h3>
+   </div>
+   </ul>
+   <form action="/users/profile/<%= n._id%>?_method=DELETE" method="post">
+     <input type="submit" value="Delete">
+   </form>
+
+   <% }) %>
   </body>
 </html>

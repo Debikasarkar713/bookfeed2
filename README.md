@@ -1,4 +1,4 @@
-# About
+# Welcome!
 
 This template is to be used for Server Side rendered projects.
 It implements a session based login strategy.
@@ -14,5 +14,6 @@ Once you have it cloned in your localhost from your fork, make sure you implemen
  `const connectionURL = process.env.MONGOLAB_URI || 'mongodb://localhost/new_auth_template_app';`
 
 ## Licensing
-All content is licensed under a CC­BY­NC­SA 4.0 license.
-All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
+Special Thanks to Darryl Ziegler, Joey Pinhas, Sang Minha, Valeria Di Gregorio
+
+Rafa and Bobby for the templates we all based our code on.

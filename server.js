@@ -11,6 +11,8 @@ const indexRouter     = require('./routes/index.js');
 const authRouter      = require('./routes/auth');
 const usersRouter     = require('./routes/users');
 const showRouter      = require('./routes/show');
+const profileRouter   = require('./routes/profile');
+
 
 const app             = express();
 const port            = process.env.PORT || 3000;
@@ -47,6 +49,8 @@ app.use('/auth', authRouter);
 app.use('/users', usersRouter);
 app.use('/show', showRouter);
 app.use('/feed', showRouter);
+app.use('/profile', profileRouter);
+
 
 // Listen on port for connections
 // process.env.PORT is needed for when we deploy to Heroku

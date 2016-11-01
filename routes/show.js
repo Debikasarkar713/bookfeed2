@@ -10,18 +10,20 @@ showRouter.get('/', bookSearch, (req, res) => {
   });
 });
 
+showRouter.get('/favorites', getBooks, (req, res) => {
+  res.render('/', {
+    favorites: res.favorites,
+    books: res.book,
+  });
+});
+
 
 showRouter.delete('/favorites/:id', deleteBooks, (req, res) => {
   res.redirect('/show');
 });
 
 showRouter.post('/favorites', saveBooks, (req, res) => {
-  res.redirect('/');
+  res.redirect('back');
 });
-
-showRouter.get('/favorites', getBooks, (req, res) => {
-  res.json(res.favorites);
-});
-
 
 module.exports = showRouter;
