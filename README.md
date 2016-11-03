@@ -1,17 +1,15 @@
 # Welcome!
 
-This template is to be used for Server Side rendered projects.
-It implements a session based login strategy.
+Welcome to Bookfeed!
 
-# Steps to use the template:
+Are you someone who likes to read many subjects and often picks up many books at once and would like to keep track of what you've read and where they categorize?
 
-The best way to use it is to fork it and then use it in your own projects.
-Once you have it cloned in your localhost from your fork, make sure you implement the next steps:
+Well then, this app is for you.
 
-1. Run `npm install`
-2. Change the mongo database to the one you are using in `lib/dbConnect.js` line: 5.
+You can save, delete and add books to many categories and keep them organized. Perfect for all ages and for people on the go. 
 
- `const connectionURL = process.env.MONGOLAB_URI || 'mongodb://localhost/new_auth_template_app';`
+
+
 
 ## Licensing
 Special Thanks to Darryl Ziegler, Joey Pinhas, Sang Minha, Valeria Di Gregorio
